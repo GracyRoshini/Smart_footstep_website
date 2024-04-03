@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: top 200px;
+background-color: #f4f4f4;
+background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),
+url('https://images.unsplash.com/photo-1600303881706-b8a373dc73c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D&w=1000&q=80');
+background-position: center;
+background-size: cover;
+position: relative;
+align-items: center;
+}
+.container {
+max-width: 400px;
+margin: 0 auto;
+padding: 60px;
+background-color: #f7f7f7;
+border: 10px solid #7c7272;
+border-radius: 5px;
+box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group label {
+display: block;
+font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+.form-group button[type="submit"] {
+background-color: #007BFF;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 3px;
+cursor: grab;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+      <h2>LOGIN</h2>
+      <form action="new1.html" method="post" onsubmit="return new1()">
+        <div class="form-group">
+          <label for="Name">Name:</label>
+          <input type="text" id="Name" name="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" required><br><br>
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="login-button" onclick="new1()">Login</button>
+        </div>
+      </form>
+    </div>
+  
+    <script>
+      function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+  
+        if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return false;
+        }
+  
+        return true;
+      }
+    </script>
+  </body>
+  
+  </html>
